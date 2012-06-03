@@ -32,6 +32,10 @@ function init()
 
 function run()
       {
+      // no score open (MuseScore 2.0+, can't happen earlier)
+      if (typeof curScore === 'undefined')
+          return;
+      
       if (curScore.pages > 1) {
           QMessageBox.warning(0, qsTr("Warning"), qsTr("Snippet Creator works on single page score only."));
           return;
