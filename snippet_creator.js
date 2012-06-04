@@ -32,6 +32,8 @@ function init()
 
 function run()
       {
+      if (typeof curScore === 'undefined')
+          return;
       if (curScore.pages > 1) {
           QMessageBox.warning(0, qsTr("Warning"), qsTr("Snippet Creator works on single page score only."));
           return;
